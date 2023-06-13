@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import './App.css';
 import { Card } from './components/Card';
 import { AdminFlagContext } from './components/providers/AdminFlagProvider';
 
 function App() {
 
-  const [isAdmin, setIsAdmin] = useState(AdminFlagContext);
+  const [isAdmin, setIsAdmin] = useContext(AdminFlagContext);
   console.log(isAdmin);
 
   const onClickSwitch = () => {
